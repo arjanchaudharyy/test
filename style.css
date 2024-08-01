@@ -1,0 +1,56 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.smash {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.pass {
+    background-color: #f44336;
+    color: white;
+}
+
+.counter {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+

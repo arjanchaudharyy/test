@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-container">
+            <h1 id="person-name">Name</h1>
+            <p id="person-age">Age: </p>
+            <p id="person-social">Social: <a id="person-social-link" href="#">Link</a></p>
+        </div>
+        <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const person = JSON.parse(localStorage.getItem('person'));
+            if (person) {
+                document.getElementById('person-name').textContent = person.name;
+                document.getElementById('person-age').textContent = 'Age: ' + person.age;
+                const socialLink = document.getElementById('person-social-link');
+                socialLink.href = person.social;
+                socialLink.textContent = person.social;
+            }
+        });
+    </script>
+</body>
+</html>
+
